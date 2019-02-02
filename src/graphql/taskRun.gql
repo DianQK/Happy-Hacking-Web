@@ -1,0 +1,7 @@
+#import "./taskFragment.gql"
+
+mutation taskRun ($id: ID!, $command: String!, $cwd: String) {
+  taskRun (id: $id, command: $command, cwd: $cwd) {
+    ...task
+  }
+}
